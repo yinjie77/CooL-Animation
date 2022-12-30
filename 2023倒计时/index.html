@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="time">
+        <div class="circle" style="--clr:#fff">
+            <div class="dots day_dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="dd"></circle>
+            </svg>
+            <div id="days">00 <br><span>天</span></div>
+        </div>
+
+        <div class="circle" style="--clr:#ff2972">
+            <div class="dots hr_dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="hh"></circle>
+            </svg>
+            <div id="hours">00<span>时</span></div>
+        </div>
+
+        <div class="circle" style="--clr:#fee800">
+            <div class="dots min_dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="mm"></circle>
+            </svg>
+            <div id="minutes">00<span>分</span></div>
+        </div>
+
+        <div class="circle" style="--clr:#04fc43">
+            <div class="dots sec_dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="ss"></circle>
+            </svg>
+            <div id="seconds">00<span>秒</span></div>
+        </div>
+    </div>
+
+    <h2 class="newYear">2023<br><span>新年快乐</span></h2>
+    <script>
+        let days = document.getElementById('days')
+        let hours = document.getElementById('hours')
+        let minutes = document.getElementById('minutes')
+        let seconds = document.getElementById('seconds')
+
+        let dd = document.getElementById('dd')
+        let hh = document.getElementById('hh')
+        let mm = document.getElementById('mm')
+        let ss = document.getElementById('ss')
+
+        let day_dot = document.querySelector('.day_dot')
+        let hr_dot = document.querySelector('.hr_dot')
+        let min_dot = document.querySelector('.min_dot')
+        let sec_dot = document.querySelector('.sec_dot')
+
+        let endDate = '01/01/2023 00:00:00'
+
+        let x = setInterval(function () {
+            let now = new Date(endDate).getTime()
+            let countDown = new Date().getTime()
+            let distance = now - countDown
+
+            let d = Math.floor(distance / (1000 * 60 * 60 * 24))
+            let h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+            let m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+            let s = Math.floor((distance % (1000 * 60)) / (1000))
+
+            days.innerHTML = d + "<br><span>天</span>"
+            hours.innerHTML = h + "<br><span>时</span>"
+            minutes.innerHTML = m + "<br><span>分</span>"
+            seconds.innerHTML = s + "<br><span>秒</span>"
+
+            dd.style.strokeDashoffset = 440 - (440 * d) / 365
+            hh.style.strokeDashoffset = 440 - (440 * h) / 24
+            mm.style.strokeDashoffset = 440 - (440 * m) / 60
+            ss.style.strokeDashoffset = 440 - (440 * s) / 60
+
+
+            day_dot.style.transform = `rotateZ(${d * (360 / 365)}deg)`
+            hr_dot.style.transform = `rotateZ(${h * (360 / 24)}deg)`
+            min_dot.style.transform = `rotateZ(${m * (360 / 60)}deg)`
+            sec_dot.style.transform = `rotateZ(${s * (360 / 60)}deg)`
+
+            if (distance < 0) {
+                clearInterval(x)
+                document.getElementById('time').style.display = 'none'
+                document.querySelector('.newYear').style.display = 'block'
+            }
+        })
+    </script>
+</body>
+
+</html>
