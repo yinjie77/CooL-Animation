@@ -1,0 +1,72 @@
+@import url(fonts.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #111;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(transparent, transparent, #0005, #0004);
+    z-index: 10000;
+    pointer-events: none;
+}
+
+.scroll {
+    width: calc(100% + 400px);
+    left: -400px;
+    display: flex;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);
+    transform: rotate(calc(var(--d)*1deg)) translateY(calc(var(--y)*1px));
+}
+
+.scroll div {
+    background: #e9c804;
+    color: #111104;
+    font-size: 3em;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    white-space: nowrap;
+    animation: animate 60s linear infinite;
+    animation-delay: -60s;
+}
+
+.scroll div:nth-child(2) {
+    animation: animate2 60s linear infinite;
+    animation-delay: -30s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
