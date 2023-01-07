@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #132730;
+}
+
+.ball {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    box-shadow: inset 0 25px 70px rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ball::before {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(#0003, #0003, transparent, transparent);
+    z-index: -1;
+}
+
+.ball::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url(glass.png);
+    background-position: center;
+    background-size: 600px;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+.ball:hover::after {
+    opacity: 1;
+}
+
+.circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    animation: animate 15s linear infinite, particles 4s ease-in-out infinite;
+}
+
+.circle:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    animation: animate 5s linear infinite, particles 6s ease-in-out infinite;
+}
+
+.circle:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    animation: animate 10s linear infinite, particles 7s ease-in-out infinite;
+}
+
+.circle:nth-child(4) {
+    width: 80px;
+    height: 80px;
+    animation: animate 7s linear infinite, particles 10s ease-in-out infinite;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow:
+        0 0 40px var(--clr),
+        0 0 60px var(--clr),
+
+        40px -70px 0px var(--clr),
+        40px -70px 20px var(--clr),
+
+        70px -70px 0px var(--clr),
+        70px -70px 20px var(--clr),
+
+        -70px -150px 0px var(--clr),
+        -70px -150px 20px var(--clr);
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes particles {
+
+    0%,
+    100% {
+        scale: 0.5;
+    }
+
+    50% {
+        scale: 1.25;
+    }
+}
