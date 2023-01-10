@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="iconfont.css">
+</head>
+
+<body>
+    <div class="navigation">
+        <div class="menuToggle">
+        </div>
+        <ul>
+            <li class="list active">
+                <a href="#" style="--clr:#f44336">
+                    <span class="icon"><i class="iconfont icon-home"></i></span>
+                    <span class="text">家庭</span>
+                </a>
+            </li>
+
+            <li class="list">
+                <a href="#" style="--clr:#ffa117">
+                    <span class="icon"><i class="iconfont icon-about"></i></span>
+                    <span class="text">关于</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#" style="--clr:#0fc70f">
+                    <span class="icon"><i class="iconfont icon-message"></i></span>
+                    <span class="text">信息</span>
+                </a>
+            </li>
+
+            <li class="list">
+                <a href="#" style="--clr:#2196f3">
+                    <span class="icon"><i class="iconfont icon-photos"></i></span>
+                    <span class="text">照片</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#" style="--clr:#b145e9">
+                    <span class="icon"><i class="iconfont icon-setting"></i></span>
+                    <span class="text">设置</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        let menuToggle = document.querySelector('.menuToggle')
+        let navigation = document.querySelector('.navigation')
+        menuToggle.onclick = function () {
+            navigation.classList.toggle('active')
+        }
+        let list = document.querySelectorAll('.list')
+        function activeLink() {
+            list.forEach((item) => {
+                item.classList.remove('active')
+                this.classList.add('active')
+            })
+        }
+        list.forEach((item) => {
+            item.addEventListener('click', activeLink)
+        })
+    </script>
+</body>
+
+</html>
