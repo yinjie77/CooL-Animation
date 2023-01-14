@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header">
+        <a href="#" class="logo">logo</a>
+        <ul class="navigation">
+            <li><a href="#" class="active">主页</a></li>
+            <li><a href="#">活动</a></li>
+            <li><a href="#">用户</a></li>
+            <li><a href="#">设置</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 id="txt">你好，冬天</h2>
+        <img src="images/monutain_01.png" id="m1">
+        <img src="images/monutain_02.png" id="m2">
+        <img src="images/monutain_03.png" id="m3">
+        <img src="images/monutain_04.png" id="m4">
+        <img src="images/monutain_04.png" id="m4">
+        <img src="images/trees.png" id="tr">
+        <img src="images/cable_cars.png" id="crs">
+        <img src="images/house.png" id="house">
+    </section>
+    <div class="sec">
+        <h2>视觉滚动网站</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia reprehenderit possimus exercitationem fugit,
+            quam nam magnam perferendis quis ipsam accusantium earum explicabo quidem suscipit labore nulla aut cum
+            eaque dolor expedita soluta. Reiciendis voluptatum officiis dolor numquam doloribus molestias tempore id
+            quod inventore soluta dolore minima, deleniti expedita sapiente fuga eveniet accusantium porro nesciunt
+            excepturi veniam ipsam nobis. Minus sint veritatis facere adipisci earum id asperiores repellat. Dicta vitae
+            veniam aperiam nostrum odio unde, quasi dolor officiis voluptatum id similique consectetur minus! Dicta vero
+            dolorem veritatis itaque corrupti, accusantium non quae, temporibus dolores maxime assumenda labore illum
+            repudiandae inventore quas enim voluptate ducimus accusamus minus quidem. Illo saepe modi obcaecati
+            cupiditate, veniam molestiae reiciendis? Esse fuga dolorum, repudiandae ullam saepe, aliquam ex repellendus
+            nesciunt sequi libero quae architecto accusantium. Quasi reiciendis repudiandae maiores ea voluptatum
+            consequuntur ullam in! Aliquid nam nobis est harum quos ducimus alias vel corrupti voluptatibus.
+            Voluptatibus corporis sit minima maiores expedita hic. Eos magni nesciunt vitae temporibus assumenda? Unde
+            saepe eligendi odio soluta corrupti, veritatis cumque, exercitationem voluptatem obcaecati reiciendis quam
+            dolorem iste maxime quos. Atque eligendi minima nobis sed aperiam dicta esse sapiente! Laboriosam qui
+            asperiores officia quae, molestias facere iste modi quos sit magni facilis debitis. Consectetur quas et modi
+            enim ratione quidem dignissimos vitae, rerum aperiam. Commodi, voluptate. Dolore pariatur magni ad illo nemo
+            nostrum beatae eligendi totam dolorum dicta, enim consequuntur culpa neque unde quisquam, quos veritatis!
+            Earum, quisquam tempore. Maiores, cumque! Odio quis fugit minus beatae sint eaque! Fuga, itaque
+            fugit!<br><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla sint temporibus veniam eius
+            saepe accusamus consectetur vitae iusto quia similique sapiente at eos, exercitationem soluta sed illo in ea
+            facilis laboriosam minus nemo perferendis culpa necessitatibus repellendus? Necessitatibus amet voluptate
+            nihil ea, aliquid repellat repellendus voluptatem, perferendis accusantium dolorum praesentium, maxime saepe
+            aperiam aliquam. Porro quod praesentium sapiente officiis numquam, exercitationem neque eaque animi, odio
+            aliquam, accusantium placeat ad dignissimos beatae suscipit qui quam vero eos quaerat asperiores tempore.
+            Repellat quibusdam adipisci similique reprehenderit quia voluptatibus doloremque aperiam earum incidunt in.
+            Distinctio eum labore corrupti sapiente officia beatae, nesciunt sit veritatis fugit illum rerum hic
+            repudiandae iure aliquam porro excepturi, commodi tempore eos amet maiores sequi libero. Ducimus delectus
+            magni ad fugit voluptatem, vero consectetur. Nobis minus maxime, tenetur nemo, est corrupti quia repellendus
+            reiciendis similique tempore laboriosam labore minima, dicta cupiditate natus autem ut temporibus voluptas
+            maiores soluta fuga esse! </p>
+    </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script> -->
+    <script src="js/gsap.js"></script>
+    <script src="js/scrollTrigger.js"></script>
+
+    <script>
+        gsap.from('#txt', {
+            scrollTrigger: {
+                scrub: true
+            },
+            x: 350,
+        })
+        gsap.from('#m1', {
+            scrollTrigger: {
+                scrub: true
+            },
+            y: 100,
+        })
+        gsap.from('#m2', {
+            scrollTrigger: {
+                scrub: true
+            },
+            y: 50,
+        })
+        gsap.from('#m3', {
+            scrollTrigger: {
+                scrub: true
+            },
+            y: 200,
+        })
+        gsap.from('#m4', {
+            scrollTrigger: {
+                scrub: true
+            },
+            y: 150,
+        })
+        gsap.from('#tr', {
+            scrollTrigger: {
+                scrub: true
+            },
+            y: 150,
+        })
+        gsap.from('#crs', {
+            scrollTrigger: {
+                scrub: true
+            },
+            x: 100,
+        })
+        gsap.from('#house', {
+            scrollTrigger: {
+                scrub: true
+            },
+            y: 0,
+        })
+    </script>
+</body>
+
+</html>
