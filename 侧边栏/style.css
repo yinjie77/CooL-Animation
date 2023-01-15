@@ -1,4 +1,4 @@
-@import url(fonts.css);
+@import url(/public/style/font/Poppins.css);
 
 * {
     margin: 0;
@@ -212,6 +212,7 @@ body {
     visibility: visible;
     opacity: 1;
 }
-.navigation ul li.active a .text{
+
+.navigation ul li.active a .text {
     color: #fff;
 }
