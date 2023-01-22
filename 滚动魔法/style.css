@@ -42,6 +42,19 @@ section .sec.sec2 {
 section h2 {
     position: absolute;
     top: 50%;
-    transform: translateX(-50%);
+    transform: translateY(-50%);
     width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 18em;
+}
+
+section .sec.sec1 h2 {
+    color: transparent;
+    -webkit-text-stroke: 5px #333;
+}
+
+section .sec.sec2 h2 {
+    color: #333;
+    -webkit-text-stroke: 5px #fff;
 }
