@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.rating {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 30px 40px;
+    border: 3px solid #111;
+    border-radius: 30px;
+    gap: 4px;
+    background: #353535;
+    box-shadow: 30px 30px 30px -10px rgba(0, 0, 0, 0.5),
+        inset 15px 15px 3px rgba(255, 255, 255, 0.1),
+        -4px -4px 15px rgba(255, 255, 255, 0.1),
+        inset -2px -2px 12px rgba(0, 0, 0, 0.75);
+
+}
+
+.rating:nth-child(1) {
+    transform: translateX(-80px);
+}
+
+.rating:nth-child(3) {
+    transform: translateX(80px);
+}
+
+.rating input {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.rating input::before {
+    position: absolute;
+    font-family: "iconfont" !important;
+    content: '\e86a';
+    font-size: 34px;
+    color: #111;
+    transition: 0.5s;
+}
+
+.rating input:hover~input::before,
+.rating input:hover::before,
+.rating input:checked~input::before,
+.rating input:checked::before {
+    color: var(--c);
+}
