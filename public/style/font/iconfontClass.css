@@ -1,9 +1,9 @@
 @font-face {
     font-family: "iconfont";
     /* Project id 3840134 */
-    src: url('//at.alicdn.com/t/c/font_3840134_sclubvdemy.woff2?t=1674812689816') format('woff2'),
-        url('//at.alicdn.com/t/c/font_3840134_sclubvdemy.woff?t=1674812689816') format('woff'),
-        url('//at.alicdn.com/t/c/font_3840134_sclubvdemy.ttf?t=1674812689816') format('truetype');
+    src: url('//at.alicdn.com/t/c/font_3840134_bq9cxgrmnu.woff2?t=1676467899067') format('woff2'),
+        url('//at.alicdn.com/t/c/font_3840134_bq9cxgrmnu.woff?t=1676467899067') format('woff'),
+        url('//at.alicdn.com/t/c/font_3840134_bq9cxgrmnu.ttf?t=1676467899067') format('truetype');
 }
 
 .iconfont {
@@ -12,6 +12,26 @@
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home-fill:before {
+    content: "\e867";
+}
+
+.icon-game1:before {
+    content: "\e625";
+}
+
+.icon-fire-fill:before {
+    content: "\e866";
+}
+
+.icon-user-fill:before {
+    content: "\e7d5";
+}
+
+.icon-search:before {
+    content: "\e7b3";
 }
 
 .icon-star-fill:before {
