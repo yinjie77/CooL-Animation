@@ -1,0 +1,103 @@
+@import url(/public/style/font/OpenSans.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+
+.tabs input {
+    visibility: hidden;
+    display: none;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 100000;
+}
+
+.buttons label {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    opacity: 0.5;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5;
+}
+
+.tabs input:nth-child(1):checked~.buttons label:nth-child(1),
+.tabs input:nth-child(2):checked~.buttons label:nth-child(2),
+.tabs input:nth-child(3):checked~.buttons label:nth-child(3) {
+    opacity: 1;
+    width: 50px;
+}
+
+.content {
+    position: relative;
+    width: 300vw;
+    display: flex;
+    transition: 0.5s;
+}
+
+.content .box {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    padding: 40px;
+}
+
+.content .box:nth-child(1) {
+    background: linear-gradient(90deg, #43cea2, #185a9d);
+}
+
+.content .box:nth-child(2) {
+    background: linear-gradient(90deg, #ff4e50, #f9d423);
+}
+
+.content .box:nth-child(3) {
+    background: linear-gradient(90deg, #9d50bb, #6e48aa);
+}
+
+.tabs input:nth-child(1):checked~.content {
+    left: 0;
+}
+
+.tabs input:nth-child(2):checked~.content {
+    left: -100vw;
+}
+
+.tabs input:nth-child(3):checked~.content {
+    left: -200vw;
+}
+
+.content .box .contentBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content .box .contentBx .iconfont {
+    font-size: 12em;
+    color: #fff;
+}
