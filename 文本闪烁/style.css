@@ -1,0 +1,51 @@
+@import url(/public/style/font/Poppins.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.box h2 {
+    font-size: 2.25em;
+    -webkit-text-stroke: 1px #f00;
+    color: transparent;
+    line-height: 2em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    animation: animate 2.5s linear infinite;
+    animation-delay: calc(var(--i) * 0.25s);
+}
+
+@keyframes animate {
+
+    0%,
+    10% {
+        color: #f00;
+        filter: hue-rotate(0deg);
+    }
+
+    10.00001% {
+        color: transparent;
+    }
+
+    100% {
+        color: transparent;
+        filter: hue-rotate(720deg);
+    }
+}
