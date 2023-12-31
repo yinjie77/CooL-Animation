@@ -1,5 +1,5 @@
-@import url(/public/style/font/Poppins.css);
-@import url(/public/style/font/Sacramento.css);
+@import url(../public/style/font/Poppins.css);
+@import url(../public/style/font/Sacramento.css);
 
 * {
     margin: 0;
