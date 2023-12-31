@@ -1,10 +1,7 @@
-### 每个demo
-
-### 有实现思路
-
+### 每个demo有实现思路
 ### gif展示效果图
+https://imgur.com/gallery/ExEdbvW
 
-- 如加载不出来或动画卡顿，可能是网速问题或者github加载问题
 
 
 
